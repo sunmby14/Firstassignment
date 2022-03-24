@@ -82,11 +82,12 @@ body {
 
 .personal-skills {
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
 }
 
 .personal-skills li {
+    cursor: pointer;
     list-style: none;
     padding: 10px;
     transition: all 0.5s ease-in-out;
@@ -101,19 +102,135 @@ body {
 /* About End */
 
 
+/* Service Start */
+
+#services {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services>h2 {
+    font-size: 35px;
+}
+
+.service-items-wrapper {
+    display: flex;
+    /* row-gap: 10px; */
+    column-gap: 10px;
+}
+
+.first-service {
+    margin-bottom: 5px;
+}
+
+.second-service {
+    margin-top: 5px;
+}
+
+.service-item {
+    border: 1px solid #3944F7;
+    border-radius: 0px;
+    text-align: center;
+    padding: 20px 10px;
+    line-height: 40px;
+    transition: all 1s ease-in-out;
+}
+
+.service-item:hover {
+    background-color: #3944F7;
+    color: white;
+}
+
+.service-item>i {
+    font-size: 50px;
+}
+
+
+/* Service End */
+
+
 /* Contact Start */
 
 #contact-us {
     display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
 
 .contact-information,
 .contact-form {
+    width: 100%;
+}
+
+.contact-information {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    border: 1px solid black;
+    justify-content: center;
+    line-height: 50px;
+}
+
+.contact-information-content {
+    display: flex;
+}
+
+.contact-information-content>p {
+    font-size: 15px;
+}
+
+.icons {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 10px;
+}
+
+.form>h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 20px 5px;
+    border-radius: 0px;
+    color: #3944F7;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #3944F7;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #3944F7;
+    font-size: 20px;
+}
+
+textarea {
+    font-family: 'Ubuntu', sans-serif;
+    width: 90%;
+    resize: none;
+    padding: 20px 5px;
+    border-radius: 0px;
+    border: none;
+    color: #3944F7;
+    font-size: 20px;
+    border-bottom: 1px solid #3944F7;
+}
+
+button {
+    width: 91.5%;
+    padding: 20px 5px;
+    border-radius: 0px;
+    font-size: 20px;
+    background-color: #3944F7;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -160,8 +277,12 @@ body {
     color: white;
 }
 
+bi-twitter:hover {
+    color: #1DA1f2;
+}
+
 .bi-instagram:hover {
-    color: purple;
+    color: #8a3ab9;
 }
 
 .bi-youtube:hover {
@@ -174,3 +295,91 @@ body {
 
 
 /* Footer End */
+
+
+/* Responsive Design Start */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /* Mobile Devices */
+    /* Navbar Start */
+    .navbar-content {
+        flex-direction: column;
+    }
+    .navbar-content>h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .navbar-list {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-list li {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+    /* Navbar End */
+    /* About Start */
+    #about-us {
+        flex-direction: column;
+    }
+    .personal-information {
+        margin-top: 20px;
+    }
+    .personal-information>h2 {
+        text-align: center;
+    }
+    /* About End */
+    /* Services Start */
+    .service-items-wrapper {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    /* Services End */
+    /* Contact Start */
+    #contact-us {
+        flex-direction: column;
+    }
+    .contact-form {
+        margin-top: 20px;
+    }
+    input,
+    textarea,
+    button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* IPad & Tablet */
+    /* About Start */
+    #about-us {
+        flex-direction: column;
+    }
+    .personal-information {
+        margin-top: 20px;
+    }
+    .personal-information>h2 {
+        text-align: center;
+    }
+    /* About End */
+    /* Contact Start */
+    #contact-us {
+        flex-direction: column;
+    }
+    .contact-form {
+        margin-top: 20px;
+    }
+    input,
+    textarea,
+    button {
+        width: 100%;
+    }
+    /* Contact End */
+}
+
+
+/* Responsive Design End */
+
+
+/* 320px — 480px */
